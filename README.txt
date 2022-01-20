@@ -50,4 +50,7 @@ Una vez realizado esto refrescamos la migracion de archivos.
 ## php artisan migrate:refresh
 Bien ahora tenemos que crear un modelo para operar en la base de datos, ahora dentro del archivo "app" donde creamos el archivo crud.php
 este sera una clase que tendra de herencia Model 
+Una vez realizado el archivo y su contenido realizamos este comando, para crear un controlador con nombre CrudController
+## php artisan make:controller CrudController -r
+Creamos el controlador
 

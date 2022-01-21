@@ -52,5 +52,26 @@ Bien ahora tenemos que crear un modelo para operar en la base de datos, ahora de
 este sera una clase que tendra de herencia Model 
 Una vez realizado el archivo y su contenido realizamos este comando, para crear un controlador con nombre CrudController
 ## php artisan make:controller CrudController -r
-Creamos el controlador
+Creamos el controlador este se encuentra en esta direccion /app/Http/Controllers/CrudController.php
+Este archivo contenido estas funciones index(), create(), store(),show(),edit(),update(),destroy()
+Ahora insertaremos o implementaremos las operaciones del CRUD con los metodos disponibles en CrudController.php
+
+Primero crearemos una ruta en /routes/web.php para insertar las operaciones.
+    Route::get('/insert', function () {
+        return view('create');
+    });
+Ahora creamos el archivo create.blade.php, blade es un procesador de contenido que se se encarga de cargar el estilo
+en la Route que introducimos antes no es necesario introducir todo el nombre del archivo.
+Instalamos bootstrap para laravel con ~
+## composer require laravel/ui
+## php artisan ui bootstrap
+No es necesario usar el ui, pero esto nos sirve para crear algunos template con bootstrap. En mi caso,
+he creado un template desde 0, y he añadido las librerias a traves del link como bootstrap
+Para usar un archivo externo como por ejemplo un css o js, debemos de usar la funcion dentro de donde lo quieras
+llamar, asset('');. Esta funcion busca los archivos dentro de la carpeta 
+    /public
+        |-css
+            |-app.css
+        |-js
+            |-app.js
 
